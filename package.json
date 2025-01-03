@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "nodemon . localhost 8080",
+    "start": "nodemon dist localhost 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {},
