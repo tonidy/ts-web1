@@ -25,6 +25,6 @@ const server = http.createServer((req, res) => {
 });
 
 // Start the server on port 8080
-server.listen(3000, () => {
+server.listen(3000, "0.0.0.0", () => {
   console.log("Server is running on http://:3000");
 });
