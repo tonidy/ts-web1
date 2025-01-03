@@ -1,11 +1,12 @@
-var http = require("http");
+import * as http from "http"; // Use the correct import syntax for TypeScript
 
-//create a server object:
-http
-  .createServer(function(req: any, res: any) {
-    res.write("Hello World test! bisa"); //write a response to the client
-    res.end(); //end the response
-  })
-  .listen(8080); //the server object listens on port 8080
+// Create a server object
+const server = http.createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
+  res.write("Hello World test! bisa"); // Write a response to the client
+  res.end(); // End the response
+});
 
-//export default module;
+// The server listens on port 8080
+server.listen(8080, () => {
+  console.log("Server is running on http://localhost:8080");
+});
